@@ -1,0 +1,56 @@
+<idea-plugin version="2">
+  <id>com.your.company.unique.plugin.id</id>
+  <name>QuickCompare</name>
+  <version>0.1</version>
+  <vendor email="nziyouren@gmail.com" url="http://www.jianshu.com/users/3d4452dd5852/">Happy software</vendor>
+
+  <description><![CDATA[
+      Quick compare tool.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      V0.1 basic function. Only windows supported<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <applicationConfigurable id="preferences.QuickComparePanel" instance="QuickComparePanel"></applicationConfigurable>
+</extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+
+    <group id="QuickCompareGroup" text="" description="">
+      <separator/>
+      <action id="MyPlugin.SelectLeft" class="SelectLeft" text="Select Left for Compare" description="SelectLeft">
+      </action>
+      <action id="MyPlugin.CompareTo" class="CompareTo" text="CompareTo" description="CompareTo">
+      </action>
+      <!-- The <separator> element defines a separator between actions.
+           It can also have an <add-to-group> child element. -->
+      <separator/>
+      <add-to-group group-id="NavbarPopupMenu" anchor="before" relative-to-action="FindUsages"/>
+      <add-to-group group-id="EditorPopupMenu" anchor="before" relative-to-action="Github.Create.Gist"/>
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="before" relative-to-action="Github.Create.Gist"/>
+    </group>
+
+  </actions>
+
+  <application-components>
+    <component>
+      <implementation-class>BC</implementation-class>
+    </component>
+  </application-components>
+</idea-plugin>
