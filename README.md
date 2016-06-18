@@ -14,19 +14,17 @@
 
 * After install complete. Go to File->Settings->Other Settings->QuickCompare
     
-<img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot1.jpg" alt="Drawing" width="450px" />
-
 * Select external compare tool executable path. Click apply.
     
-<img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot2.jpg" alt="Drawing" width="450px" />
+<img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot1.jpg" alt="Drawing" width="450px" />
 
 * Open a file. Right click pop up editor menu. Select menu item "Select Left for Compare"
     
-<img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot3.jpg" alt="Drawing" width="450px" />
+<img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot2.jpg" alt="Drawing" width="450px" />
 
 * Open another file. Right click pop up editor menu. Select menu item "Compare to"
 
-<img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot4.jpg" alt="Drawing" width="450px" />
+<img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot3.jpg" alt="Drawing" width="450px" />
 
 ## Change note
 
