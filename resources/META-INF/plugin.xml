@@ -1,17 +1,15 @@
 <idea-plugin version="2">
   <id>com.your.company.unique.plugin.id</id>
   <name>QuickCompare</name>
-  <version>0.1</version>
+  <version>0.2</version>
   <vendor email="nziyouren@gmail.com" url="http://www.jianshu.com/users/3d4452dd5852/">Happy software</vendor>
 
   <description><![CDATA[
       Quick compare tool.<br>
-      <em>most HTML tags may be used</em>
     ]]></description>
 
   <change-notes><![CDATA[
-      V0.1 basic function. Only windows supported<br>
-      <em>most HTML tags may be used</em>
+      V0.2 basic function. Add mac beyondcompare support<br>
     ]]>
   </change-notes>
 

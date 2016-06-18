@@ -23,6 +23,9 @@
 
 ## Change note
 
+### V0.2
+* Add Mac OS support.
+
 ### V0.1 
 * Implement baisc function. Currently only supported windows.
     
