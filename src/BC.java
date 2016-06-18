@@ -56,7 +56,6 @@ public class BC implements ApplicationComponent {
         Process p = null;
         try {
             System.out.println("before compare...");
-          //  String execString = MessageFormat.format("D:\\Beyond Compare 4\\BCompare.exe {0} {1}",leftFile.getPath(),rightFile.getPath());
             PropertiesComponent component = PropertiesComponent.getInstance();
             if (StringUtil.isEmpty(component.getValue("bc"))){
 
@@ -64,9 +63,8 @@ public class BC implements ApplicationComponent {
 
             }else {
                 String comparePath = component.getValue("bc");
-                String execString = MessageFormat.format("{0} {1} {2}",comparePath,leftFile.getPath(),rightFile.getPath());
-//            p = Runtime.getRuntime().exec("D:\\Beyond Compare 4\\BCompare.exe F:\\bctest\\a.txt F:\\bctest\\b.txt");
-                p = Runtime.getRuntime().exec(execString);
+                String[] execStringArray = new String[]{comparePath,leftFile.getPath(),rightFile.getPath()};
+                Runtime.getRuntime().exec(execStringArray);
                 System.out.println("after compare...");
             }
         } catch (IOException e) {
