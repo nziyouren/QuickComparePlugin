@@ -7,8 +7,8 @@
 
 ##Install 
 
-* Install from Android studio plugin repository, search "qucickcompare"
-* Checkout source code and build QucickCompare.jar
+* Install from Android studio plugin repository, search "quickcompare"
+* Checkout source code and build QuickCompare.jar
 
 ##How to use?
 
