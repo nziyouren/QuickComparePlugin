@@ -14,7 +14,7 @@
 
 * After install complete. Go to File->Settings->Other Settings->QuickCompare
     
-* Select external compare tool executable path. Click apply. Note: On mac os, you must Install Command Line Tools first. [Reference](http://www.scootersoftware.com/support.php?zz=kb_vcs_osx)
+* Select external compare tool executable path. Click apply. Note: On mac os, you must Install Command Line Tools first. [http://www.scootersoftware.com/support.php?zz=kb_vcs_osx](http://www.scootersoftware.com/support.php?zz=kb_vcs_osx)
     
 <img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot1.jpg" alt="Drawing" width="450px" />
 
