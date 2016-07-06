@@ -1,6 +1,10 @@
 # QuickComparePlugin
 ###Android studio plugin. Quick compare using external compare tools acrossing different projects
 
+##Why I develop this plugin?
+* Please refer my blog:[http://www.jianshu.com/p/2d7433bf54e9](http://www.jianshu.com/p/2d7433bf54e9)
+
+
 ##Feature
 * Quick compare acrossing different projects with external compare tool.
 * Support Windows and Mac OS
@@ -27,6 +31,10 @@
 <img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot3.jpg" alt="Drawing" width="450px" />
 
 ## Change note
+
+### V0.3
+* Fix bug:Settings screen apply button doesn't reflect atual state
+* Fix bug:Settings screen reset button doesn't work sometimes
 
 ### V0.2
 * Add Mac OS support.
