@@ -34,18 +34,19 @@ public class QuickComparePanel implements Configurable {
     @Override
     public boolean isModified() {
         System.out.println("isModified()");
-//        return mCompareForm.isModified();
-        return true;
+        return mCompareForm.isModified();
     }
 
     @Override
     public void apply() throws ConfigurationException {
+        System.out.println("click apply()");
         mCompareForm.apply();
     }
 
     @Override
     public void reset() {
-//        mCompareForm.reset();
+        System.out.println("click reset()");
+        mCompareForm.reset();
     }
 
     @Override

@@ -43,10 +43,10 @@ public class CompareForm {
     }
 
     public void reset() {
-        System.out.println("rest..........");
-        mPathTextField.setText("");
+        System.out.println("reset..........");
         PropertiesComponent component = PropertiesComponent.getInstance();
-        component.setValue("bc", "");
+        String originalPath = component.getValue("bc");
+        mPathTextField.setText(originalPath);
     }
 
     public CompareForm() {
@@ -84,21 +84,11 @@ public class CompareForm {
         }
 
         VirtualFile selectedFile = virtualFile;  //取得选中的文件
-        System.out.println("select path:" + selectedFile.getPath());
-
-        PropertiesComponent component = PropertiesComponent.getInstance();
-        if (StringUtil.isEmpty(component.getValue("bc"))) {
-            System.out.println("original path is empty!");
-            component.setValue("bc", selectedFile.getPath());
-        } else {
-            System.out.println("original path is: " + component.getValue("bc"));
-            component.setValue("bc", selectedFile.getPath());
-            System.out.println("update path is: " + selectedFile.getPath());
-        }
 
         mPathTextField.setText(selectedFile.getPath());
         mContentPanel.invalidate();
         mContentPanel.updateUI();
+        mIsModified = true;
 
     }
 
