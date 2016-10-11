@@ -9,8 +9,6 @@ import com.intellij.openapi.vfs.VirtualFile;
  */
 public class SelectLeft extends AnAction {
 
-    private BC mInstance = (BC) ApplicationManager.getApplication().getComponent("BC");
-
     @Override
     public void update(AnActionEvent e) {
         super.update(e);
@@ -21,8 +19,16 @@ public class SelectLeft extends AnAction {
 
         // TODO: insert action logic here
         VirtualFile vFile = e.getData(PlatformDataKeys.VIRTUAL_FILE);
-        mInstance.setLeftFile(vFile);
-        mInstance.setCurrentState(BC.SelectState.WAITFORCOMPARE);
+        BC instance = getBCInstance();
+        if (instance == null){
+            return;
+        }
+        instance.setLeftFile(vFile);
+        instance.setCurrentState(BC.SelectState.WAITFORCOMPARE);
 
+    }
+
+    private BC getBCInstance(){
+        return BC.getApplicationInstance();
     }
 }

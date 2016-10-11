@@ -1,4 +1,5 @@
 import com.intellij.ide.util.PropertiesComponent;
+import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ApplicationComponent;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.openapi.vfs.VirtualFile;
@@ -99,5 +100,9 @@ public class BC implements ApplicationComponent {
     @NotNull
     public String getComponentName() {
         return "BC";
+    }
+
+    public static BC getApplicationInstance(){
+        return ApplicationManager.getApplication().getComponent(BC.class);
     }
 }

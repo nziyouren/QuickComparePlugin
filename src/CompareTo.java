@@ -14,31 +14,25 @@ import javax.swing.*;
  */
 public class CompareTo extends AnAction {
 
-    private BC mInstance = (BC) ApplicationManager.getApplication().getComponent("BC");
-
     public CompareTo() {
-        System.out.println("CompareTo()");
         Presentation presentation = getTemplatePresentation();
         presentation.setVisible(false);
     }
 
     public CompareTo(Icon icon) {
         super(icon);
-        System.out.println("CompareTo()");
         Presentation presentation = getTemplatePresentation();
         presentation.setVisible(false);
     }
 
     public CompareTo(@Nullable String text) {
         super(text);
-        System.out.println("CompareTo()");
         Presentation presentation = getTemplatePresentation();
         presentation.setVisible(false);
     }
 
     public CompareTo(@Nullable String text, @Nullable String description, @Nullable Icon icon) {
         super(text, description, icon);
-        System.out.println("CompareTo()");
         Presentation presentation = getTemplatePresentation();
         presentation.setVisible(false);
     }
@@ -58,14 +52,23 @@ public class CompareTo extends AnAction {
     public void actionPerformed(AnActionEvent e) {
         // TODO: insert action logic here
         VirtualFile vFile = e.getData(PlatformDataKeys.VIRTUAL_FILE);
-        mInstance.setRightFile(vFile);
-        mInstance.doCompare();
-        mInstance.setCurrentState(BC.SelectState.INITIALIZE);
+        BC instance = getBCInstance();
+        if (instance == null){
+            return;
+        }
+        instance.setRightFile(vFile);
+        instance.doCompare();
+        instance.setCurrentState(BC.SelectState.INITIALIZE);
     }
 
     private void updateSelf(AnActionEvent e){
 
-        BC.SelectState state = mInstance.getCurrentState();
+        BC instance = getBCInstance();
+        if (instance == null){
+            return;
+        }
+
+        BC.SelectState state = instance.getCurrentState();
 
         System.out.println("current state: "+state.name());
 
@@ -83,12 +86,16 @@ public class CompareTo extends AnAction {
             Presentation presentation = e.getPresentation();
             presentation.setEnabledAndVisible(true);
 
-            VirtualFile leftFile = mInstance.getLeftFile();
+            VirtualFile leftFile = instance.getLeftFile();
             String compareTo = leftFile.getName();
 
             presentation.setText("Compare to \""+compareTo+"\"");
 
         }
 
+    }
+
+    private BC getBCInstance(){
+        return BC.getApplicationInstance();
     }
 }

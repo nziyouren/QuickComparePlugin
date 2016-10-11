@@ -32,6 +32,9 @@
 
 ## Change note
 
+### V0.4
+* Fixed for 2016.2(AndroidStudio 2.2 and above) compatibilty
+
 ### V0.3
 * Fix bug:Settings screen apply button doesn't reflect atual state
 * Fix bug:Settings screen reset button doesn't work sometimes
