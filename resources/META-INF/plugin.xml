@@ -39,6 +39,8 @@
       </action>
       <action id="MyPlugin.CompareTo" class="CompareTo" text="CompareTo" description="CompareTo">
       </action>
+      <action id="MyPlugin.AutoCompare" class="AutoCompare" text="AutoCompare" description="AutoCompare" icon="icons/autoenable.png">
+      </action>
       <!-- The <separator> element defines a separator between actions.
            It can also have an <add-to-group> child element. -->
       <separator/>
