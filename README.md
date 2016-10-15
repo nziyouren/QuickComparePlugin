@@ -32,6 +32,9 @@
 
 ## Change note
 
+### V0.5
+* Add auto compare function. When select left file to compare, then jump to another project. If the same file existed in another project, the autocompare menu will appear automatically.
+
 ### V0.4
 * Fixed for 2016.2(AndroidStudio 2.2 and above) compatibilty
 
