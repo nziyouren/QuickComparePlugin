@@ -6,6 +6,7 @@
 
 
 ##Feature
+* With auto compare, you don't need to find the same name file in another project. The plugin find it automatically, then enable it. All you need to do is right click.
 * Quick compare acrossing different projects with external compare tool.
 * Support Windows and Mac OS
 
