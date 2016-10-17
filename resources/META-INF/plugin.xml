@@ -2,7 +2,7 @@
   <id>com.your.company.unique.plugin.id</id>
   <name>QuickCompare</name>
   <version>0.5</version>
-  <vendor email="nziyouren@gmail.com" url="http://www.jianshu.com/users/3d4452dd5852/">Happy software</vendor>
+  <vendor email="nziyouren@gmail.com" url="https://github.com/nziyouren/QuickComparePlugin">Happy software</vendor>
 
   <description><![CDATA[
       Quick compare tool.<br>
