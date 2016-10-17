@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>com.your.company.unique.plugin.id</id>
   <name>QuickCompare</name>
-  <version>0.5</version>
+  <version>0.5.1</version>
   <vendor email="nziyouren@gmail.com" url="https://github.com/nziyouren/QuickComparePlugin">Happy software</vendor>
 
   <description><![CDATA[
