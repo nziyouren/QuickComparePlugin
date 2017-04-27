@@ -1,21 +1,22 @@
 # QuickComparePlugin
-###Android studio plugin. Quick compare using external compare tools acrossing different projects
 
-##Why I develop this plugin?
+### Android studio plugin. Quick compare using external compare tools acrossing different projects
+
+## Why I develop this plugin?
 * Please refer my blog:[http://www.jianshu.com/p/2d7433bf54e9](http://www.jianshu.com/p/2d7433bf54e9)
 
 
-##Feature
+## Feature
 * With auto compare, you don't need to find the same name file in another project. The plugin find it automatically, then enable it. All you need to do is right click.
 * Quick compare acrossing different projects with external compare tool.
 * Support Windows and Mac OS
 
-##Install 
+## Install 
 
 * Install from Android studio plugin repository, search "quickcompare"
 * Checkout source code and build QuickCompare.jar
 
-##How to use?
+## How to use?
 
 * After install complete. Go to File->Settings->Other Settings->QuickCompare
     
@@ -53,9 +54,9 @@
 * Implement baisc function. Currently only supported windows.
     
 
-#Contact
+# Contact
 You can reach me by email nziyouren@gmail.com
 
-#License:
+# License:
 Apache License, Version 2.0
 
