@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>com.your.company.unique.plugin.id</id>
   <name>QuickCompare</name>
-  <version>0.5.1</version>
+  <version>0.5.2</version>
   <vendor email="nziyouren@gmail.com" url="https://github.com/nziyouren/QuickComparePlugin">Happy software</vendor>
 
   <description><![CDATA[
@@ -9,6 +9,7 @@
     ]]></description>
 
   <change-notes><![CDATA[
+      v0.5.2 Fix NPE exception on AndroidStudio 2.3<br>
       V0.5 Add auto compare function. When select left file to compare, then jump to another project. If the same file existed in another project, the autocompare menu will appear automatically.<br>
       V0.4 Fixed for 2016.2(AndroidStudio 2.2 and above) compatibilty<br>
       V0.3 Fix bug:Settings screen apply button doesn't reflect atual state<br>
@@ -28,7 +29,7 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
-    <applicationConfigurable id="preferences.QuickComparePanel" instance="QuickComparePanel"></applicationConfigurable>
+    <applicationConfigurable id="preferences.QuickComparePanel" instance="com.happy.plugin.quickcompare.QuickComparePanel"></applicationConfigurable>
 </extensions>
 
   <actions>
@@ -36,11 +37,11 @@
 
     <group id="QuickCompareGroup" text="" description="">
       <separator/>
-      <action id="MyPlugin.SelectLeft" class="SelectLeft" text="Select Left for Compare" description="SelectLeft">
+      <action id="MyPlugin.com.happy.plugin.quickcompare.SelectLeft" class="com.happy.plugin.quickcompare.SelectLeft" text="Select Left for Compare" description="com.happy.plugin.quickcompare.SelectLeft">
       </action>
-      <action id="MyPlugin.CompareTo" class="CompareTo" text="CompareTo" description="CompareTo">
+      <action id="MyPlugin.com.happy.plugin.quickcompare.CompareTo" class="com.happy.plugin.quickcompare.CompareTo" text="com.happy.plugin.quickcompare.CompareTo" description="com.happy.plugin.quickcompare.CompareTo">
       </action>
-      <action id="MyPlugin.AutoCompare" class="AutoCompare" text="AutoCompare" description="AutoCompare" icon="icons/autoenable.png">
+      <action id="MyPlugin.com.happy.plugin.quickcompare.AutoCompare" class="com.happy.plugin.quickcompare.AutoCompare" text="com.happy.plugin.quickcompare.AutoCompare" description="com.happy.plugin.quickcompare.AutoCompare" icon="icons/autoenable.png">
       </action>
       <!-- The <separator> element defines a separator between actions.
            It can also have an <add-to-group> child element. -->
@@ -54,7 +55,7 @@
 
   <application-components>
     <component>
-      <implementation-class>BC</implementation-class>
+      <implementation-class>com.happy.plugin.quickcompare.BC</implementation-class>
     </component>
   </application-components>
 </idea-plugin>

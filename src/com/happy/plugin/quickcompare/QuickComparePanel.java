@@ -1,3 +1,6 @@
+package com.happy.plugin.quickcompare;
+
+import com.happy.plugin.quickcompare.ui.CompareForm;
 import com.intellij.openapi.options.Configurable;
 import com.intellij.openapi.options.ConfigurationException;
 import org.jetbrains.annotations.Nls;

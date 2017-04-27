@@ -33,6 +33,9 @@
 
 ## Change note
 
+### V0.5.2
+* Fix NPE exception on AndroidStudio 2.3
+
 ### V0.5
 * Add auto compare function. When select left file to compare, then jump to another project. If the same file existed in another project, the autocompare menu will appear automatically.
 
