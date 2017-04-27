@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b1396eb-6138-49c8-a9cb-7afafc8fd8e0" name="Default" comment="*Fixed for 2016.2(AndroidStudio 2.2 and above) compatibilty">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/BC.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/happy/plugin/BC.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AutoCompare.java" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/AutoCompare.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/CompareForm.form" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/ui/CompareForm.form" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/CompareForm.java" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/ui/CompareForm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/CompareTo.java" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/CompareTo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/QuickComparePanel.java" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/QuickComparePanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SelectLeft.java" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/SelectLeft.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuickCompare.jar" afterPath="$PROJECT_DIR$/QuickCompare.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
     </list>
     <ignored path="QuickCompare.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,8 +69,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+            <state relative-caret-position="306">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -666,7 +656,21 @@
       <option name="project" value="LOCAL" />
       <updated>1476196672006</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="*fix NPE exception on AndroidStudio 2.3 and above">
+      <created>1493303540587</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1493303540587</updated>
+    </task>
+    <task id="LOCAL-00004" summary="-delete old BC.java">
+      <created>1493303610849</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1493303610849</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -681,7 +685,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28314605" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40449437" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40449437" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -715,7 +719,9 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="*Fixed for 2016.2(AndroidStudio 2.2 and above) compatibilty" />
     <MESSAGE value="+publish new version  v0.4 QuickCompare.jar file" />
-    <option name="LAST_COMMIT_MESSAGE" value="+publish new version  v0.4 QuickCompare.jar file" />
+    <MESSAGE value="*fix NPE exception on AndroidStudio 2.3 and above" />
+    <MESSAGE value="-delete old BC.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="-delete old BC.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1155,8 +1161,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        <state relative-caret-position="306">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
