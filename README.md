@@ -34,6 +34,9 @@
 
 ## Change note
 
+### V0.5.3
+* Fix issue: can't find autoenable.png. Thanks to Simone Z
+
 ### V0.5.2
 * Fix NPE exception on AndroidStudio 2.3
 

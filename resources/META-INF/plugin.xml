@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>com.your.company.unique.plugin.id</id>
   <name>QuickCompare</name>
-  <version>0.5.2</version>
+  <version>0.5.3</version>
   <vendor email="nziyouren@gmail.com" url="https://github.com/nziyouren/QuickComparePlugin">Happy software</vendor>
 
   <description><![CDATA[
@@ -9,6 +9,7 @@
     ]]></description>
 
   <change-notes><![CDATA[
+      v0.5.3 Fix issue: can't find autoenable.png. Thanks to Simone Z<br>
       v0.5.2 Fix NPE exception on AndroidStudio 2.3<br>
       V0.5 Add auto compare function. When select left file to compare, then jump to another project. If the same file existed in another project, the autocompare menu will appear automatically.<br>
       V0.4 Fixed for 2016.2(AndroidStudio 2.2 and above) compatibilty<br>
@@ -39,9 +40,9 @@
       <separator/>
       <action id="MyPlugin.com.happy.plugin.quickcompare.SelectLeft" class="com.happy.plugin.quickcompare.SelectLeft" text="Select Left for Compare" description="com.happy.plugin.quickcompare.SelectLeft">
       </action>
-      <action id="MyPlugin.com.happy.plugin.quickcompare.CompareTo" class="com.happy.plugin.quickcompare.CompareTo" text="com.happy.plugin.quickcompare.CompareTo" description="com.happy.plugin.quickcompare.CompareTo">
+      <action id="MyPlugin.com.happy.plugin.quickcompare.CompareTo" class="com.happy.plugin.quickcompare.CompareTo" text="CompareTo" description="CompareTo">
       </action>
-      <action id="MyPlugin.com.happy.plugin.quickcompare.AutoCompare" class="com.happy.plugin.quickcompare.AutoCompare" text="com.happy.plugin.quickcompare.AutoCompare" description="com.happy.plugin.quickcompare.AutoCompare" icon="icons/autoenable.png">
+      <action id="MyPlugin.com.happy.plugin.quickcompare.AutoCompare" class="com.happy.plugin.quickcompare.AutoCompare" text="AutoCompare" description="AutoCompare" icon="/icons/autoenable.png">
       </action>
       <!-- The <separator> element defines a separator between actions.
            It can also have an <add-to-group> child element. -->
