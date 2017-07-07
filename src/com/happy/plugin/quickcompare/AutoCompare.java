@@ -58,7 +58,7 @@ public class AutoCompare extends AnAction {
     @Override
     public void actionPerformed(AnActionEvent e) {
         // TODO: insert action logic here
-        BC instance = getBCInstance();
+        CompareManager instance = getCompareManager();
         if (instance == null){
             return;
         }
@@ -67,7 +67,7 @@ public class AutoCompare extends AnAction {
         }
         instance.setRightFile(mAutoCompareFile);
         instance.doCompare();
-        instance.setCurrentState(BC.SelectState.INITIALIZE);
+        instance.setCurrentState(CompareManager.SelectState.INITIALIZE);
         clearAutoCompare();
     }
 
@@ -77,23 +77,23 @@ public class AutoCompare extends AnAction {
 
     private void updateSelf(AnActionEvent e){
 
-        BC instance = getBCInstance();
+        CompareManager instance = getCompareManager();
         if (instance == null){
             return;
         }
 
-        BC.SelectState state = instance.getCurrentState();
+        CompareManager.SelectState state = instance.getCurrentState();
 
         System.out.println("current state: "+state.name());
 
-        if (state == BC.SelectState.INITIALIZE){
+        if (state == CompareManager.SelectState.INITIALIZE){
 
             System.out.println("Compare to setVisible false: "+state.name());
             Presentation presentation = e.getPresentation();
             presentation.setEnabledAndVisible(false);
 
 
-        }else if (state == BC.SelectState.WAITFORCOMPARE){
+        }else if (state == CompareManager.SelectState.WAITFORCOMPARE){
 
             System.out.println("Compare to setVisible true: "+state.name());
 
@@ -128,7 +128,7 @@ public class AutoCompare extends AnAction {
 
     }
 
-    private BC getBCInstance(){
-        return BC.getApplicationInstance();
+    private CompareManager getCompareManager(){
+        return CompareManager.getApplicationInstance();
     }
 }

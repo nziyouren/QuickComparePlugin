@@ -56,7 +56,7 @@
 
   <application-components>
     <component>
-      <implementation-class>com.happy.plugin.quickcompare.BC</implementation-class>
+      <implementation-class>com.happy.plugin.quickcompare.CompareManager</implementation-class>
     </component>
   </application-components>
 </idea-plugin>

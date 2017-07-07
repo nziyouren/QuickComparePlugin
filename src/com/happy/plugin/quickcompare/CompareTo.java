@@ -53,34 +53,34 @@ public class CompareTo extends AnAction {
     public void actionPerformed(AnActionEvent e) {
         // TODO: insert action logic here
         VirtualFile vFile = e.getData(PlatformDataKeys.VIRTUAL_FILE);
-        BC instance = getBCInstance();
+        CompareManager instance = getCompareManager();
         if (instance == null){
             return;
         }
         instance.setRightFile(vFile);
         instance.doCompare();
-        instance.setCurrentState(BC.SelectState.INITIALIZE);
+        instance.setCurrentState(CompareManager.SelectState.INITIALIZE);
     }
 
     private void updateSelf(AnActionEvent e){
 
-        BC instance = getBCInstance();
+        CompareManager instance = getCompareManager();
         if (instance == null){
             return;
         }
 
-        BC.SelectState state = instance.getCurrentState();
+        CompareManager.SelectState state = instance.getCurrentState();
 
         System.out.println("current state: "+state.name());
 
-        if (state == BC.SelectState.INITIALIZE){
+        if (state == CompareManager.SelectState.INITIALIZE){
 
             System.out.println("Compare to setVisible false: "+state.name());
             Presentation presentation = e.getPresentation();
             presentation.setEnabledAndVisible(false);
 
 
-        }else if (state == BC.SelectState.WAITFORCOMPARE){
+        }else if (state == CompareManager.SelectState.WAITFORCOMPARE){
 
             System.out.println("Compare to setVisible true: "+state.name());
 
@@ -96,7 +96,7 @@ public class CompareTo extends AnAction {
 
     }
 
-    private BC getBCInstance(){
-        return BC.getApplicationInstance();
+    private CompareManager getCompareManager(){
+        return CompareManager.getApplicationInstance();
     }
 }
