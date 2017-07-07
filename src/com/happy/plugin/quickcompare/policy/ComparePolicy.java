@@ -7,6 +7,11 @@ import com.intellij.openapi.vfs.VirtualFile;
  */
 public interface ComparePolicy {
 
+    enum PolicyType{
+        BeyondComparePolicy,
+        InternalComparePolicy,
+    }
+
     VirtualFile getRightFile();
 
     void setRightFile(VirtualFile mRightFile);
