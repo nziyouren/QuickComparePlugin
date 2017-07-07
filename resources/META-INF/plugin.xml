@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>com.your.company.unique.plugin.id</id>
   <name>QuickCompare</name>
-  <version>0.5.3</version>
+  <version>0.5.4</version>
   <vendor email="nziyouren@gmail.com" url="https://github.com/nziyouren/QuickComparePlugin">Happy software</vendor>
 
   <description><![CDATA[
@@ -9,6 +9,7 @@
     ]]></description>
 
   <change-notes><![CDATA[
+      v0.5.4 Support internal diff view<br>
       v0.5.3 Fix issue: can't find autoenable.png. Thanks to Simone Z<br>
       v0.5.2 Fix NPE exception on AndroidStudio 2.3<br>
       V0.5 Add auto compare function. When select left file to compare, then jump to another project. If the same file existed in another project, the autocompare menu will appear automatically.<br>
