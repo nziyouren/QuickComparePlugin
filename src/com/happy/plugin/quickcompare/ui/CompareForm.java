@@ -1,5 +1,9 @@
 package com.happy.plugin.quickcompare.ui;
 
+import com.happy.plugin.quickcompare.CompareManager;
+import com.happy.plugin.quickcompare.Constants;
+import com.happy.plugin.quickcompare.policy.ComparePolicy;
+import com.happy.plugin.quickcompare.policy.ComparePolicyFactory;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.fileChooser.FileChooser;
 import com.intellij.openapi.fileChooser.FileChooserDescriptor;
@@ -14,6 +18,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 /**
  * Created by zxx on 2016/6/16.
@@ -22,6 +28,7 @@ public class CompareForm {
     public JPanel mContentPanel;
     private JTextField mPathTextField;
     private JButton mChoosePathButton;
+    private JComboBox comboBox1;
 
     private boolean mIsModified = false;
 
@@ -32,14 +39,32 @@ public class CompareForm {
         System.out.println("select path:" + mPathTextField.getText());
 
         PropertiesComponent component = PropertiesComponent.getInstance();
-        if (StringUtil.isEmpty(component.getValue("bc"))) {
+        if (StringUtil.isEmpty(component.getValue(Constants.KEY_EXECUTABLE_PATH))) {
             System.out.println("original path is empty!");
             component.setValue("bc", mPathTextField.getText());
         } else {
-            System.out.println("original path is: " + component.getValue("bc"));
+            System.out.println("original path is: " + component.getValue(Constants.KEY_EXECUTABLE_PATH));
             component.setValue("bc", mPathTextField.getText());
             System.out.println("update path is: " + mPathTextField.getText());
         }
+
+        if (comboBox1.getSelectedIndex() != -1) {
+            System.out.println("save user choose index:" + comboBox1.getSelectedIndex());
+            component.setValue(Constants.KEY_CHOOSE_TOOL, "" + comboBox1.getSelectedIndex());
+        }
+
+        if (comboBox1.getSelectedIndex() != -1 && !StringUtil.isEmpty(mPathTextField.getText())) {
+            updateComparePolicy(comboBox1.getSelectedIndex());
+        }
+    }
+
+    private void updateComparePolicy(int policyIndex) {
+
+        ComparePolicy.PolicyType type = ComparePolicy.PolicyType.values()[policyIndex];
+        ComparePolicy currentPolicy = ComparePolicyFactory.getFactoryInstance().makeComparePolicy(type);
+        CompareManager.getApplicationInstance().setComparePolicy(currentPolicy);
+
+        System.out.println("update policy to : " + currentPolicy);
 
     }
 
@@ -58,10 +83,33 @@ public class CompareForm {
                 chooseFile();
             }
         });
-        final PropertiesComponent component = PropertiesComponent.getInstance();
-        if (!StringUtil.isEmpty(component.getValue("bc"))) {
 
-            final String path = component.getValue("bc");
+        comboBox1.addItem("QuickCompare");
+        comboBox1.addItem("Internal Diff");
+
+        comboBox1.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    System.out.println("choose: " + e.getItem());
+                    mIsModified = true;
+                }
+
+            }
+        });
+
+        loadUISettings();
+
+    }
+
+    private void loadUISettings() {
+
+        // TODO: 2017/7/7 need change bc to const string
+        final PropertiesComponent component = PropertiesComponent.getInstance();
+        if (!StringUtil.isEmpty(component.getValue(Constants.KEY_EXECUTABLE_PATH))) {
+
+            final String path = component.getValue(Constants.KEY_EXECUTABLE_PATH);
 
             mPathTextField.setText(path);
             mPathTextField.invalidate();
@@ -70,6 +118,16 @@ public class CompareForm {
             mContentPanel.updateUI();
 
         }
+
+        if (!StringUtil.isEmpty(component.getValue(Constants.KEY_CHOOSE_TOOL))) {
+
+            final String index = component.getValue(Constants.KEY_CHOOSE_TOOL);
+
+            comboBox1.setSelectedIndex(Integer.parseInt(index));
+
+
+        }
+
 
     }
 
@@ -113,16 +171,16 @@ public class CompareForm {
      */
     private void $$$setupUI$$$() {
         mContentPanel = new JPanel();
-        mContentPanel.setLayout(new GridLayoutManager(4, 2, new Insets(0, 0, 0, 0), -1, -1));
+        mContentPanel.setLayout(new GridLayoutManager(4, 3, new Insets(0, 0, 0, 0), -1, -1));
         final Spacer spacer1 = new Spacer();
-        mContentPanel.add(spacer1, new GridConstraints(2, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
+        mContentPanel.add(spacer1, new GridConstraints(2, 0, 1, 3, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final Spacer spacer2 = new Spacer();
-        mContentPanel.add(spacer2, new GridConstraints(3, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
+        mContentPanel.add(spacer2, new GridConstraints(3, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final Spacer spacer3 = new Spacer();
-        mContentPanel.add(spacer3, new GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
+        mContentPanel.add(spacer3, new GridConstraints(0, 1, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final JPanel panel1 = new JPanel();
         panel1.setLayout(new BorderLayout(0, 0));
-        mContentPanel.add(panel1, new GridConstraints(1, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        mContentPanel.add(panel1, new GridConstraints(1, 0, 1, 3, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         final JLabel label1 = new JLabel();
         label1.setText("Path to executable:     ");
         panel1.add(label1, BorderLayout.WEST);
@@ -131,6 +189,14 @@ public class CompareForm {
         mChoosePathButton = new JButton();
         mChoosePathButton.setText("...");
         panel1.add(mChoosePathButton, BorderLayout.EAST);
+        final JPanel panel2 = new JPanel();
+        panel2.setLayout(new GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
+        mContentPanel.add(panel2, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        final JLabel label2 = new JLabel();
+        label2.setText("Label");
+        panel2.add(label2, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        comboBox1 = new JComboBox();
+        panel2.add(comboBox1, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     }
 
     /**

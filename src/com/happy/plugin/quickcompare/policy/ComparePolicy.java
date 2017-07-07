@@ -8,9 +8,15 @@ import com.intellij.openapi.vfs.VirtualFile;
 public interface ComparePolicy {
 
     enum PolicyType{
+
         BeyondComparePolicy,
-        InternalComparePolicy,
+        InternalComparePolicy,;
+
     }
+
+
+    int POLICY_BEYONDCOMAPARE = 0;
+    int POLICY_INTERNALCOMPARE = 1;
 
     VirtualFile getRightFile();
 
