@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b1396eb-6138-49c8-a9cb-7afafc8fd8e0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/AbstractComparePolicy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/BeyondComparePolicy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/ComparePolicy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/InternalComparePolicy.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/BC.java" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/CompareManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/AutoCompare.java" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/AutoCompare.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/CompareTo.java" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/CompareTo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/SelectLeft.java" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/SelectLeft.java" />
     </list>
     <ignored path="QuickCompare.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -754,7 +745,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493310595051</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="-change architecture to support multi compare tools">
+      <created>1499415338797</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1499415338797</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -807,7 +805,8 @@
     <MESSAGE value="-delete old BC.java" />
     <MESSAGE value="+add 0.5.2  jar output package" />
     <MESSAGE value="*Fix issue: can't find autoenable.png. Thanks to Simone Z" />
-    <option name="LAST_COMMIT_MESSAGE" value="*Fix issue: can't find autoenable.png. Thanks to Simone Z" />
+    <MESSAGE value="-change architecture to support multi compare tools" />
+    <option name="LAST_COMMIT_MESSAGE" value="-change architecture to support multi compare tools" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
