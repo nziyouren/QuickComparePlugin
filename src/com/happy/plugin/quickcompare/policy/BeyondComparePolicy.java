@@ -1,5 +1,6 @@
 package com.happy.plugin.quickcompare.policy;
 
+import com.happy.plugin.quickcompare.Constants;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.openapi.vfs.VirtualFile;
@@ -17,12 +18,12 @@ public class BeyondComparePolicy extends AbstractComparePolicy {
         try {
             System.out.println("before compare...");
             PropertiesComponent component = PropertiesComponent.getInstance();
-            if (StringUtil.isEmpty(component.getValue("bc"))){
+            if (StringUtil.isEmpty(component.getValue(Constants.KEY_EXECUTABLE_PATH))){
 
                 System.out.println("pls set bc path first...");
 
             }else {
-                String comparePath = component.getValue("bc");
+                String comparePath = component.getValue(Constants.KEY_EXECUTABLE_PATH);
                 String[] execStringArray = new String[]{comparePath,leftFile.getPath(),rightFile.getPath()};
                 Runtime.getRuntime().exec(execStringArray);
                 System.out.println("after compare...");

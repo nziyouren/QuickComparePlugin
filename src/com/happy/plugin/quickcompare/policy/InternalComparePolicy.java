@@ -20,12 +20,12 @@ public class InternalComparePolicy extends AbstractComparePolicy {
         try {
 //            System.out.println("before compare...");
 //            PropertiesComponent component = PropertiesComponent.getInstance();
-//            if (StringUtil.isEmpty(component.getValue("bc"))){
+//            if (StringUtil.isEmpty(component.getValue(Constants.KEY_EXECUTABLE_PATH))){
 //
 //                System.out.println("pls set bc path first...");
 //
 //            }else {
-//                String comparePath = component.getValue("bc");
+//                String comparePath = component.getValue(Constants.KEY_EXECUTABLE_PATH);
 //                String[] execStringArray = new String[]{comparePath,leftFile.getPath(),rightFile.getPath()};
 //                Runtime.getRuntime().exec(execStringArray);
 //                System.out.println("after compare...");

@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b1396eb-6138-49c8-a9cb-7afafc8fd8e0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuickCompare.jar" afterPath="$PROJECT_DIR$/QuickCompare.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/ComparePolicy.java" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/ComparePolicy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/ui/CompareForm.form" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/ui/CompareForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/CompareManager.java" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/CompareManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/BeyondComparePolicy.java" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/BeyondComparePolicy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/InternalComparePolicy.java" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/InternalComparePolicy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/ui/CompareForm.java" afterPath="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/ui/CompareForm.java" />
     </list>
     <ignored path="QuickCompare.iws" />
@@ -27,58 +28,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CompareManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/CompareManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#987#988#0" expanded="true" />
-                <element signature="e#1024#1025#0" expanded="true" />
-                <element signature="e#1089#1090#0" expanded="true" />
-                <element signature="e#1140#1141#0" expanded="true" />
-                <element signature="e#3027#3028#0" expanded="true" />
-                <element signature="e#3054#3055#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComparePolicy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/ComparePolicy.java">
+      <file leaf-file-name="ComparePolicyFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/ComparePolicyFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <caret line="11" column="12" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComparePolicyFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/ComparePolicyFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="25" column="67" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="67" />
-              <folding>
-                <element signature="e#385#386#0" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#502#503#0" expanded="true" />
-                <element signature="e#540#541#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BeyondComparePolicy.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BeyondComparePolicy.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/BeyondComparePolicy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="421">
+              <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1342#1343#0" expanded="true" />
-                <element signature="e#1391#1392#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,30 +53,27 @@
       <file leaf-file-name="InternalComparePolicy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/InternalComparePolicy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="522">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1969#1970#0" expanded="true" />
-                <element signature="e#2018#2019#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompareForm.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CompareForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/ui/CompareForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="66" column="64" selection-start-line="66" selection-start-column="64" selection-end-line="66" selection-end-column="64" />
+            <state relative-caret-position="350">
+              <caret line="110" column="80" selection-start-line="110" selection-start-column="51" selection-end-line="110" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3138#3293#0" expanded="true" />
-                <element signature="e#3292#3293#0" expanded="true" />
-                <element signature="e#3419#3731#0" expanded="true" />
-                <element signature="e#3730#3731#0" expanded="true" />
-                <element signature="e#5181#5182#0" expanded="true" />
-                <element signature="e#5215#5216#0" expanded="true" />
+                <element signature="e#3213#3368#0" expanded="true" />
+                <element signature="e#3367#3368#0" expanded="true" />
+                <element signature="e#3521#3833#0" expanded="true" />
+                <element signature="e#3832#3833#0" expanded="true" />
+                <element signature="initializer##0;class#CompareForm#0" expanded="true" />
                 <element signature="initializer##0;class#CompareForm#0" expanded="true" />
                 <element signature="method#$$$setupUI$$$#0;class#CompareForm#0" expanded="false" />
               </folding>
@@ -118,10 +81,35 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CompareManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/CompareManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+              <folding>
+                <element signature="e#987#988#0" expanded="true" />
+                <element signature="e#1024#1025#0" expanded="true" />
+                <element signature="e#3077#3078#0" expanded="true" />
+                <element signature="e#3104#3105#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="PropertiesComponent.class" pinned="false" current-in-tab="false">
         <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/ide/util/PropertiesComponent.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="414">
               <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
               <folding />
             </state>
@@ -131,7 +119,7 @@
       <file leaf-file-name="JComboBox.java" pinned="false" current-in-tab="false">
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/src.zip!/javax/swing/JComboBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
+            <state relative-caret-position="10458">
               <caret line="639" column="0" selection-start-line="639" selection-start-column="0" selection-end-line="639" selection-end-column="0" />
               <folding />
             </state>
@@ -150,8 +138,11 @@
       </file>
       <file leaf-file-name="CompareForm.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/ui/CompareForm.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -196,25 +187,24 @@
         <option value="$PROJECT_DIR$/src/CompareTo.java" />
         <option value="$PROJECT_DIR$/src/com/happy/plugin/SelectLeft.java" />
         <option value="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/SelectLeft.java" />
-        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/AbstractComparePolicy.java" />
-        <option value="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/BeyondComparePolicy.java" />
         <option value="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/InternalComparePolicy.java" />
         <option value="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/BC.java" />
-        <option value="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/CompareManager.java" />
         <option value="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/AutoCompare.java" />
         <option value="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/CompareTo.java" />
         <option value="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/ComparePolicyFactory.java" />
         <option value="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/ui/CompareForm.form" />
         <option value="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/Constants.java" />
         <option value="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/ComparePolicy.java" />
+        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/ui/CompareForm.java" />
+        <option value="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/CompareManager.java" />
+        <option value="$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/BeyondComparePolicy.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="982" />
@@ -244,7 +234,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -453,11 +443,11 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="com.happy.plugin.quickcompare.QuickComparePanel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -806,11 +796,25 @@
       <option name="project" value="LOCAL" />
       <updated>1499437958652</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="+add policy setting ui">
+      <created>1499442622406</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1499442622406</updated>
+    </task>
+    <task id="LOCAL-00011" summary="*change plugin.xml">
+      <created>1499443026544</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1499443026544</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="23" width="1680" height="982" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="982" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -862,20 +866,22 @@
     <MESSAGE value="-change architecture to support multi compare tools" />
     <MESSAGE value="+add missing file" />
     <MESSAGE value="+add ComparePolicyFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="+add ComparePolicyFactory" />
+    <MESSAGE value="+add policy setting ui" />
+    <MESSAGE value="*change plugin.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="*change plugin.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/CompareManager.java</url>
-          <line>158</line>
+          <line>120</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/CompareManager.java</url>
-          <line>151</line>
+          <line>113</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
@@ -907,7 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,13 +921,10 @@
         <state relative-caret-position="324">
           <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#987#988#0" expanded="true" />
             <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1089#1090#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
-            <element signature="e#3027#3028#0" expanded="true" />
-            <element signature="e#3054#3055#0" expanded="true" />
+            <element signature="e#3077#3078#0" expanded="true" />
+            <element signature="e#3104#3105#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1097,7 +1099,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1105,7 +1106,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8190">
           <caret line="483" column="19" selection-start-line="483" selection-start-column="19" selection-end-line="483" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1115,11 +1115,6 @@
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/icons/autoenable.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -1133,37 +1128,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/BCd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="11" column="69" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/BCd.java" />
     <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/AutoCompare.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="641">
           <caret line="130" column="44" selection-start-line="130" selection-start-column="27" selection-end-line="130" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2230#2231#0" expanded="true" />
-            <element signature="e#2269#2270#0" expanded="true" />
-            <element signature="e#4322#4323#0" expanded="true" />
-            <element signature="e#4384#4385#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1171,11 +1143,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1602">
           <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2974#2975#0" expanded="true" />
-            <element signature="e#3036#3037#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1198,58 +1165,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/BeyondComparePolicy.java">
+    <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/ComparePolicy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1342#1343#0" expanded="true" />
-            <element signature="e#1391#1392#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="234">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/CompareManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1089#1090#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
-            <element signature="e#3027#3028#0" expanded="true" />
-            <element signature="e#3054#3055#0" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/resources/icons/autoenable.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/InternalComparePolicy.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/ide/util/PropertiesComponent.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1969#1970#0" expanded="true" />
-            <element signature="e#2018#2019#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="414">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/src.zip!/javax/swing/JComboBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
+        <state relative-caret-position="10458">
           <caret line="639" column="0" selection-start-line="639" selection-start-column="0" selection-end-line="639" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/ide/util/PropertiesComponent.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1262,51 +1202,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/ComparePolicyFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="25" column="67" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="67" />
-          <folding>
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/ui/CompareForm.form">
+      <provider editor-type-id="ui-designer">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/ComparePolicy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/ui/CompareForm.form">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/ComparePolicyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="12" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/InternalComparePolicy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/ui/CompareForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="66" column="64" selection-start-line="66" selection-start-column="64" selection-end-line="66" selection-end-column="64" />
+        <state relative-caret-position="350">
+          <caret line="110" column="80" selection-start-line="110" selection-start-column="51" selection-end-line="110" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3138#3293#0" expanded="true" />
-            <element signature="e#3292#3293#0" expanded="true" />
-            <element signature="e#3419#3731#0" expanded="true" />
-            <element signature="e#3730#3731#0" expanded="true" />
-            <element signature="e#5181#5182#0" expanded="true" />
-            <element signature="e#5215#5216#0" expanded="true" />
+            <element signature="e#3213#3368#0" expanded="true" />
+            <element signature="e#3367#3368#0" expanded="true" />
+            <element signature="e#3521#3833#0" expanded="true" />
+            <element signature="e#3832#3833#0" expanded="true" />
+            <element signature="initializer##0;class#CompareForm#0" expanded="true" />
             <element signature="initializer##0;class#CompareForm#0" expanded="true" />
             <element signature="method#$$$setupUI$$$#0;class#CompareForm#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/CompareManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+          <folding>
+            <element signature="e#987#988#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#3077#3078#0" expanded="true" />
+            <element signature="e#3104#3105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/happy/plugin/quickcompare/policy/BeyondComparePolicy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -41,10 +41,10 @@ public class CompareForm {
         PropertiesComponent component = PropertiesComponent.getInstance();
         if (StringUtil.isEmpty(component.getValue(Constants.KEY_EXECUTABLE_PATH))) {
             System.out.println("original path is empty!");
-            component.setValue("bc", mPathTextField.getText());
+            component.setValue(Constants.KEY_EXECUTABLE_PATH, mPathTextField.getText());
         } else {
             System.out.println("original path is: " + component.getValue(Constants.KEY_EXECUTABLE_PATH));
-            component.setValue("bc", mPathTextField.getText());
+            component.setValue(Constants.KEY_EXECUTABLE_PATH, mPathTextField.getText());
             System.out.println("update path is: " + mPathTextField.getText());
         }
 
@@ -71,7 +71,7 @@ public class CompareForm {
     public void reset() {
         System.out.println("reset..........");
         PropertiesComponent component = PropertiesComponent.getInstance();
-        String originalPath = component.getValue("bc");
+        String originalPath = component.getValue(Constants.KEY_EXECUTABLE_PATH);
         mPathTextField.setText(originalPath);
     }
 
@@ -87,6 +87,8 @@ public class CompareForm {
         comboBox1.addItem("QuickCompare");
         comboBox1.addItem("Internal Diff");
 
+        loadUISettings();
+
         comboBox1.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
@@ -99,7 +101,6 @@ public class CompareForm {
             }
         });
 
-        loadUISettings();
 
     }
 
