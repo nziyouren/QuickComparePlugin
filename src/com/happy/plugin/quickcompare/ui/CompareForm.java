@@ -64,7 +64,7 @@ public class CompareForm {
         ComparePolicy currentPolicy = ComparePolicyFactory.getFactoryInstance().makeComparePolicy(type);
         CompareManager.getApplicationInstance().setComparePolicy(currentPolicy);
 
-        System.out.println("update policy to : " + currentPolicy);
+        System.out.println("update policy to : " + currentPolicy.policyName());
 
     }
 
