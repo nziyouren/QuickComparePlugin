@@ -1,6 +1,7 @@
 package com.happy.plugin.quickcompare;
 
 import com.happy.plugin.quickcompare.policy.ComparePolicy;
+import com.happy.plugin.quickcompare.policy.ComparePolicyFactory;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.application.PathManager;
@@ -14,11 +15,55 @@ import java.io.IOException;
 /**
  * Created by zxx on 2016/6/15.
  */
-public class CompareManager implements ApplicationComponent, ComparePolicy {
+public class CompareManager implements ApplicationComponent {
 
     public enum SelectState{
         INITIALIZE,
         WAITFORCOMPARE,
+    }
+
+    private ComparePolicy mComparePolicy;
+
+    private VirtualFile mLeftFile;
+
+    private VirtualFile mRightFile;
+
+    private SelectState mCurrentState = SelectState.INITIALIZE;
+
+    public VirtualFile getRightFile() {
+        return mRightFile;
+    }
+
+    public void setRightFile(VirtualFile mRightFile) {
+        this.mRightFile = mRightFile;
+    }
+
+    public VirtualFile getLeftFile() {
+        return mLeftFile;
+    }
+
+    public void setLeftFile(VirtualFile mLeftFile) {
+        this.mLeftFile = mLeftFile;
+    }
+
+    public void doCompare(){
+        //check user select some compare tool and check user select executable path
+        PropertiesComponent component = PropertiesComponent.getInstance();
+        if (component.getInt(Constants.KEY_CHOOSE_TOOL,-1) == -1){
+            System.out.println("pls choose compare tool first...");
+            return;
+        }
+        if (StringUtil.isEmpty(component.getValue(Constants.KEY_EXECUTABLE_PATH))){
+            System.out.println("pls set bc path first...");
+            return;
+        }
+
+        if (mComparePolicy == null){
+            mComparePolicy = ComparePolicyFactory.getFactoryInstance().makeComparePolicy(ComparePolicy.PolicyType.values()[component.getInt(Constants.KEY_CHOOSE_TOOL,-1)]);
+        }
+
+        mComparePolicy.compare(mLeftFile,mRightFile);
+
     }
 
     public SelectState getCurrentState() {
@@ -29,84 +74,12 @@ public class CompareManager implements ApplicationComponent, ComparePolicy {
         this.mCurrentState = currentState;
     }
 
-    private SelectState mCurrentState = SelectState.INITIALIZE;
-
     public ComparePolicy getComparePolicy() {
         return mComparePolicy;
     }
 
     public void setComparePolicy(ComparePolicy comparePolicy) {
         this.mComparePolicy = comparePolicy;
-    }
-
-    private ComparePolicy mComparePolicy;
-
-    @Override
-    public VirtualFile getRightFile() {
-        if (mComparePolicy != null){
-            return mComparePolicy.getRightFile();
-        }
-        return null;
-    }
-
-    @Override
-    public void setRightFile(VirtualFile mRightFile) {
-        if (mComparePolicy != null){
-            mComparePolicy.setRightFile(mRightFile);
-        }
-    }
-
-    @Override
-    public VirtualFile getLeftFile() {
-        if (mComparePolicy != null){
-            return mComparePolicy.getLeftFile();
-        }
-        return null;
-    }
-
-    @Override
-    public void setLeftFile(VirtualFile mLeftFile) {
-        if (mComparePolicy != null){
-            mComparePolicy.setLeftFile(mLeftFile);
-        }
-    }
-
-    @Override
-    public void doCompare(){
-        if (mComparePolicy != null) {
-            mComparePolicy.doCompare();
-        }
-    }
-
-    public void compare(VirtualFile leftFile,VirtualFile rightFile){
-
-        Process p = null;
-        try {
-            System.out.println("before compare...");
-            PropertiesComponent component = PropertiesComponent.getInstance();
-            if (StringUtil.isEmpty(component.getValue(Constants.KEY_EXECUTABLE_PATH))){
-
-                System.out.println("pls set bc path first...");
-
-            }else {
-                String comparePath = component.getValue(Constants.KEY_EXECUTABLE_PATH);
-                String[] execStringArray = new String[]{comparePath,leftFile.getPath(),rightFile.getPath()};
-                Runtime.getRuntime().exec(execStringArray);
-                System.out.println("after compare...");
-            }
-        } catch (IOException e) {
-            System.out.println("compare exception...");
-            e.printStackTrace();
-        } catch (Exception e){
-            System.out.println("compare exception...");
-            e.printStackTrace();
-        }
-
-    }
-
-    @Override
-    public String policyName() {
-        return null;
     }
 
     public CompareManager() {

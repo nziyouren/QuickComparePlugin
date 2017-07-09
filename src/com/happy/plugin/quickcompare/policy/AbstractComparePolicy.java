@@ -7,34 +7,5 @@ import com.intellij.openapi.vfs.VirtualFile;
  */
 public abstract class AbstractComparePolicy implements ComparePolicy{
 
-    private VirtualFile mLeftFile;
-
-    private VirtualFile mRightFile;
-
-    @Override
-    public VirtualFile getRightFile() {
-        return mRightFile;
-    }
-
-    @Override
-    public void setRightFile(VirtualFile mRightFile) {
-        this.mRightFile = mRightFile;
-    }
-
-    @Override
-    public VirtualFile getLeftFile() {
-        return mLeftFile;
-    }
-
-    @Override
-    public void setLeftFile(VirtualFile mLeftFile) {
-        this.mLeftFile = mLeftFile;
-    }
-
-    @Override
-    public void doCompare(){
-        compare(mLeftFile,mRightFile);
-    }
-
 
 }

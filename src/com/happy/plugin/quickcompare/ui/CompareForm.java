@@ -50,7 +50,7 @@ public class CompareForm {
 
         if (comboBox1.getSelectedIndex() != -1) {
             System.out.println("save user choose index:" + comboBox1.getSelectedIndex());
-            component.setValue(Constants.KEY_CHOOSE_TOOL, "" + comboBox1.getSelectedIndex());
+            component.setValue(Constants.KEY_CHOOSE_TOOL, comboBox1.getSelectedIndex(), -1);
         }
 
         if (comboBox1.getSelectedIndex() != -1 && !StringUtil.isEmpty(mPathTextField.getText())) {
@@ -120,15 +120,9 @@ public class CompareForm {
 
         }
 
-        if (!StringUtil.isEmpty(component.getValue(Constants.KEY_CHOOSE_TOOL))) {
 
-            final String index = component.getValue(Constants.KEY_CHOOSE_TOOL);
-
-            comboBox1.setSelectedIndex(Integer.parseInt(index));
-
-
-        }
-
+        int index = component.getInt(Constants.KEY_CHOOSE_TOOL, -1);
+        comboBox1.setSelectedIndex(index);
 
     }
 

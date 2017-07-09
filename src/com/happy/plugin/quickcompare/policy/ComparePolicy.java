@@ -14,16 +14,6 @@ public interface ComparePolicy {
 
     }
 
-    VirtualFile getRightFile();
-
-    void setRightFile(VirtualFile mRightFile);
-
-    VirtualFile getLeftFile();
-
-    void setLeftFile(VirtualFile mLeftFile);
-
-    void doCompare();
-
     void compare(VirtualFile leftFile,VirtualFile rightFile);
 
     String policyName();
