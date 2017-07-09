@@ -14,10 +14,6 @@ public interface ComparePolicy {
 
     }
 
-
-    int POLICY_BEYONDCOMAPARE = 0;
-    int POLICY_INTERNALCOMPARE = 1;
-
     VirtualFile getRightFile();
 
     void setRightFile(VirtualFile mRightFile);

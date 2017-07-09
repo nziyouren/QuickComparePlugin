@@ -5,7 +5,7 @@ package com.happy.plugin.quickcompare;
  */
 public final class Constants {
 
-    public final static String KEY_EXECUTABLE_PATH = "key_path";
-    public final static String KEY_CHOOSE_TOOL = "key_choose_tool";
+    public final static String KEY_EXECUTABLE_PATH = "com.happy.plugin.quickcompare_key_path";
+    public final static String KEY_CHOOSE_TOOL = "com.happy.plugin.quickcompare_key_choose_tool";
 
 }
