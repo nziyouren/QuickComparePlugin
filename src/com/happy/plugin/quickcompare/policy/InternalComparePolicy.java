@@ -1,10 +1,10 @@
 package com.happy.plugin.quickcompare.policy;
 
 import com.happy.plugin.quickcompare.Constants;
+import com.happy.plugin.quickcompare.entity.CompareObject;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.application.PathManager;
 import com.intellij.openapi.util.text.StringUtil;
-import com.intellij.openapi.vfs.VirtualFile;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 public class InternalComparePolicy extends AbstractComparePolicy {
     @Override
-    public void compare(VirtualFile leftFile, VirtualFile rightFile) {
+    public void compare(CompareObject leftFile, CompareObject rightFile) {
 
         System.out.println("homepath:" + PathManager.getHomePath());
 
@@ -28,7 +28,7 @@ public class InternalComparePolicy extends AbstractComparePolicy {
             }else {
                 String comparePath = component.getValue(Constants.KEY_EXECUTABLE_PATH);
                 String action = "diff";
-                String[] execStringArray = new String[]{comparePath, action, leftFile.getPath(), rightFile.getPath()};
+                String[] execStringArray = new String[]{comparePath, action, leftFile.compareFile.getPath(), rightFile.compareFile.getPath()};
                 Runtime.getRuntime().exec(execStringArray);
                 System.out.println("after compare...");
             }

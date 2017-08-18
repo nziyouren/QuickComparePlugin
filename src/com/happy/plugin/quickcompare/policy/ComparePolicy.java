@@ -1,6 +1,6 @@
 package com.happy.plugin.quickcompare.policy;
 
-import com.intellij.openapi.vfs.VirtualFile;
+import com.happy.plugin.quickcompare.entity.CompareObject;
 
 /**
  * Created by zhang on 2017/7/7.
@@ -14,7 +14,7 @@ public interface ComparePolicy {
 
     }
 
-    void compare(VirtualFile leftFile,VirtualFile rightFile);
+    void compare(CompareObject leftFile, CompareObject rightFile);
 
     String policyName();
 

@@ -1,5 +1,6 @@
 package com.happy.plugin.quickcompare;
 
+import com.happy.plugin.quickcompare.entity.CompareObject;
 import com.happy.plugin.quickcompare.policy.ComparePolicy;
 import com.happy.plugin.quickcompare.policy.ComparePolicyFactory;
 import com.intellij.ide.util.PropertiesComponent;
@@ -24,25 +25,25 @@ public class CompareManager implements ApplicationComponent {
 
     private ComparePolicy mComparePolicy;
 
-    private VirtualFile mLeftFile;
+    private CompareObject mLeftFile;
 
-    private VirtualFile mRightFile;
+    private CompareObject mRightFile;
 
     private SelectState mCurrentState = SelectState.INITIALIZE;
 
-    public VirtualFile getRightFile() {
+    public CompareObject getRightFile() {
         return mRightFile;
     }
 
-    public void setRightFile(VirtualFile mRightFile) {
+    public void setRightFile(CompareObject mRightFile) {
         this.mRightFile = mRightFile;
     }
 
-    public VirtualFile getLeftFile() {
+    public CompareObject getLeftFile() {
         return mLeftFile;
     }
 
-    public void setLeftFile(VirtualFile mLeftFile) {
+    public void setLeftFile(CompareObject mLeftFile) {
         this.mLeftFile = mLeftFile;
     }
 

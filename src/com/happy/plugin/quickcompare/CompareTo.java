@@ -1,9 +1,11 @@
 package com.happy.plugin.quickcompare;
 
+import com.happy.plugin.quickcompare.entity.CompareObject;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
 import com.intellij.openapi.actionSystem.Presentation;
+import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -53,11 +55,12 @@ public class CompareTo extends AnAction {
     public void actionPerformed(AnActionEvent e) {
         // TODO: insert action logic here
         VirtualFile vFile = e.getData(PlatformDataKeys.VIRTUAL_FILE);
+        Project project = e.getData(PlatformDataKeys.PROJECT);
         CompareManager instance = getCompareManager();
         if (instance == null){
             return;
         }
-        instance.setRightFile(vFile);
+        instance.setRightFile(new CompareObject(vFile,project));
         instance.doCompare();
         instance.setCurrentState(CompareManager.SelectState.INITIALIZE);
     }
@@ -87,7 +90,7 @@ public class CompareTo extends AnAction {
             Presentation presentation = e.getPresentation();
             presentation.setEnabledAndVisible(true);
 
-            VirtualFile leftFile = instance.getLeftFile();
+            VirtualFile leftFile = instance.getLeftFile().compareFile;
             String compareTo = leftFile.getName();
 
             presentation.setText("Compare to \""+compareTo+"\"");

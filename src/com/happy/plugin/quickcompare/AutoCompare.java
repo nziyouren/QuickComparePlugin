@@ -1,5 +1,6 @@
 package com.happy.plugin.quickcompare;
 
+import com.happy.plugin.quickcompare.entity.CompareObject;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
@@ -19,7 +20,7 @@ import javax.swing.*;
  */
 public class AutoCompare extends AnAction {
 
-    private VirtualFile mAutoCompareFile = null;
+    private CompareObject mAutoCompareFile = null;
 
     public AutoCompare() {
         Presentation presentation = getTemplatePresentation();
@@ -99,10 +100,13 @@ public class AutoCompare extends AnAction {
 
             Presentation presentation = e.getPresentation();
 
-            VirtualFile leftFile = instance.getLeftFile();
+            VirtualFile leftFile = instance.getLeftFile().compareFile;
             String compareTo = leftFile.getName();
 
             Project project = e.getData(PlatformDataKeys.PROJECT);
+
+            System.out.println("wait for compare project name: "+project.getName()+" path: "+project.getBasePath());
+
             PsiFileSystemItem[] items = FilenameIndex.getFilesByName(project,compareTo, GlobalSearchScope.projectScope(project));
 
             for (PsiFileSystemItem item:items){
@@ -110,12 +114,12 @@ public class AutoCompare extends AnAction {
             }
 
             if (items != null && items.length>0){
-                if (!leftFile.getPath().equals(items[0].getVirtualFile().getPath())){
+                if (!leftFile.getPath().equals(items[0].getVirtualFile().getPath()) && (!instance.getLeftFile().belongProject.getBasePath().equals(project.getBasePath()))) {
                     //maybe it's another project file, so we do it!
                     System.out.println("maybe it's another project file, so we do it!");
                     presentation.setEnabledAndVisible(true);
-                    mAutoCompareFile = items[0].getVirtualFile();
-                }else {
+                    mAutoCompareFile = new CompareObject(items[0].getVirtualFile(),project);
+                } else {
                     //alreay the same file, we don't enable it
                     System.out.println("alreay the same file, we don't enable it");
                     presentation.setEnabledAndVisible(false);

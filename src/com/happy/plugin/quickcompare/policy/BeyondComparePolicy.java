@@ -1,9 +1,9 @@
 package com.happy.plugin.quickcompare.policy;
 
 import com.happy.plugin.quickcompare.Constants;
+import com.happy.plugin.quickcompare.entity.CompareObject;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.util.text.StringUtil;
-import com.intellij.openapi.vfs.VirtualFile;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ import java.io.IOException;
 public class BeyondComparePolicy extends AbstractComparePolicy {
 
     @Override
-    public void compare(VirtualFile leftFile, VirtualFile rightFile) {
+    public void compare(CompareObject leftFile, CompareObject rightFile) {
         Process p = null;
         try {
             System.out.println("before compare...");
@@ -24,7 +24,7 @@ public class BeyondComparePolicy extends AbstractComparePolicy {
 
             }else {
                 String comparePath = component.getValue(Constants.KEY_EXECUTABLE_PATH);
-                String[] execStringArray = new String[]{comparePath,leftFile.getPath(),rightFile.getPath()};
+                String[] execStringArray = new String[]{comparePath,leftFile.compareFile.getPath(),rightFile.compareFile.getPath()};
                 Runtime.getRuntime().exec(execStringArray);
                 System.out.println("after compare...");
             }
