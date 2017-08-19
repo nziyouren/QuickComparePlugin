@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 public class InternalComparePolicy extends AbstractComparePolicy {
     @Override
-    public void compare(CompareObject leftFile, CompareObject rightFile) {
+    public void compare(CompareObject leftCompare, CompareObject rightCompare) {
 
         System.out.println("homepath:" + PathManager.getHomePath());
 
@@ -28,7 +28,7 @@ public class InternalComparePolicy extends AbstractComparePolicy {
             }else {
                 String comparePath = component.getValue(Constants.KEY_EXECUTABLE_PATH);
                 String action = "diff";
-                String[] execStringArray = new String[]{comparePath, action, leftFile.compareFile.getPath(), rightFile.compareFile.getPath()};
+                String[] execStringArray = new String[]{comparePath, action, leftCompare.compareFile.getPath(), rightCompare.compareFile.getPath()};
                 Runtime.getRuntime().exec(execStringArray);
                 System.out.println("after compare...");
             }

@@ -5,13 +5,9 @@ import com.happy.plugin.quickcompare.policy.ComparePolicy;
 import com.happy.plugin.quickcompare.policy.ComparePolicyFactory;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.application.ApplicationManager;
-import com.intellij.openapi.application.PathManager;
 import com.intellij.openapi.components.ApplicationComponent;
 import com.intellij.openapi.util.text.StringUtil;
-import com.intellij.openapi.vfs.VirtualFile;
 import org.jetbrains.annotations.NotNull;
-
-import java.io.IOException;
 
 /**
  * Created by zxx on 2016/6/15.
@@ -25,26 +21,26 @@ public class CompareManager implements ApplicationComponent {
 
     private ComparePolicy mComparePolicy;
 
-    private CompareObject mLeftFile;
+    private CompareObject mLeftCompare;
 
-    private CompareObject mRightFile;
+    private CompareObject mRightCompare;
 
     private SelectState mCurrentState = SelectState.INITIALIZE;
 
-    public CompareObject getRightFile() {
-        return mRightFile;
+    public CompareObject getRightCompare() {
+        return mRightCompare;
     }
 
-    public void setRightFile(CompareObject mRightFile) {
-        this.mRightFile = mRightFile;
+    public void setRightCompare(CompareObject mRightCompare) {
+        this.mRightCompare = mRightCompare;
     }
 
-    public CompareObject getLeftFile() {
-        return mLeftFile;
+    public CompareObject getLeftCompare() {
+        return mLeftCompare;
     }
 
-    public void setLeftFile(CompareObject mLeftFile) {
-        this.mLeftFile = mLeftFile;
+    public void setLeftCompare(CompareObject mLeftCompare) {
+        this.mLeftCompare = mLeftCompare;
     }
 
     public void doCompare(){
@@ -63,7 +59,7 @@ public class CompareManager implements ApplicationComponent {
             mComparePolicy = ComparePolicyFactory.getFactoryInstance().makeComparePolicy(ComparePolicy.PolicyType.values()[component.getInt(Constants.KEY_CHOOSE_TOOL,-1)]);
         }
 
-        mComparePolicy.compare(mLeftFile,mRightFile);
+        mComparePolicy.compare(mLeftCompare, mRightCompare);
 
     }
 

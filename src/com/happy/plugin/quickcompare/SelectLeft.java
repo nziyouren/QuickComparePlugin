@@ -27,7 +27,7 @@ public class SelectLeft extends AnAction {
         if (instance == null){
             return;
         }
-        instance.setLeftFile(new CompareObject(vFile,project));
+        instance.setLeftCompare(new CompareObject(vFile,project));
         instance.setCurrentState(CompareManager.SelectState.WAITFORCOMPARE);
 
 

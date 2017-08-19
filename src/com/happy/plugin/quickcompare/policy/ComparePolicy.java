@@ -14,7 +14,7 @@ public interface ComparePolicy {
 
     }
 
-    void compare(CompareObject leftFile, CompareObject rightFile);
+    void compare(CompareObject leftCompare, CompareObject rightCompare);
 
     String policyName();
 

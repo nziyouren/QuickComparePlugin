@@ -66,7 +66,7 @@ public class AutoCompare extends AnAction {
         if (mAutoCompareFile == null){
             return;
         }
-        instance.setRightFile(mAutoCompareFile);
+        instance.setRightCompare(mAutoCompareFile);
         instance.doCompare();
         instance.setCurrentState(CompareManager.SelectState.INITIALIZE);
         clearAutoCompare();
@@ -100,7 +100,7 @@ public class AutoCompare extends AnAction {
 
             Presentation presentation = e.getPresentation();
 
-            VirtualFile leftFile = instance.getLeftFile().compareFile;
+            VirtualFile leftFile = instance.getLeftCompare().compareFile;
             String compareTo = leftFile.getName();
 
             Project project = e.getData(PlatformDataKeys.PROJECT);
@@ -114,7 +114,7 @@ public class AutoCompare extends AnAction {
             }
 
             if (items != null && items.length>0){
-                if (!leftFile.getPath().equals(items[0].getVirtualFile().getPath()) && (!instance.getLeftFile().belongProject.getBasePath().equals(project.getBasePath()))) {
+                if (!leftFile.getPath().equals(items[0].getVirtualFile().getPath()) && (!instance.getLeftCompare().belongProject.getBasePath().equals(project.getBasePath()))) {
                     //maybe it's another project file, so we do it!
                     System.out.println("maybe it's another project file, so we do it!");
                     presentation.setEnabledAndVisible(true);

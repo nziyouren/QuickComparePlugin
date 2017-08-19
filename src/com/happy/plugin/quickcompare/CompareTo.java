@@ -60,7 +60,7 @@ public class CompareTo extends AnAction {
         if (instance == null){
             return;
         }
-        instance.setRightFile(new CompareObject(vFile,project));
+        instance.setRightCompare(new CompareObject(vFile,project));
         instance.doCompare();
         instance.setCurrentState(CompareManager.SelectState.INITIALIZE);
     }
@@ -90,7 +90,7 @@ public class CompareTo extends AnAction {
             Presentation presentation = e.getPresentation();
             presentation.setEnabledAndVisible(true);
 
-            VirtualFile leftFile = instance.getLeftFile().compareFile;
+            VirtualFile leftFile = instance.getLeftCompare().compareFile;
             String compareTo = leftFile.getName();
 
             presentation.setText("Compare to \""+compareTo+"\"");
