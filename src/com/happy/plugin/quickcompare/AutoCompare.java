@@ -98,33 +98,38 @@ public class AutoCompare extends AnAction {
 
             System.out.println("Compare to setVisible true: "+state.name());
 
+            if (instance.getLeftCompare() == null){
+                System.out.println("no left file selected, so just return");
+                return;
+            }
+
             Presentation presentation = e.getPresentation();
 
             VirtualFile leftFile = instance.getLeftCompare().compareFile;
             String compareTo = leftFile.getName();
 
-            Project project = e.getData(PlatformDataKeys.PROJECT);
+            Project currentProject = e.getData(PlatformDataKeys.PROJECT);
 
-            System.out.println("wait for compare project name: "+project.getName()+" path: "+project.getBasePath());
+            System.out.println("wait for compare project name: "+currentProject.getName()+" path: "+currentProject.getBasePath());
 
-            PsiFileSystemItem[] items = FilenameIndex.getFilesByName(project,compareTo, GlobalSearchScope.projectScope(project));
+            PsiFileSystemItem[] items = FilenameIndex.getFilesByName(currentProject,compareTo, GlobalSearchScope.projectScope(currentProject));
 
             for (PsiFileSystemItem item:items){
                 System.out.println("found path: "+item.getVirtualFile().getPath());
             }
 
-            if (items != null && items.length>0){
-                if (!leftFile.getPath().equals(items[0].getVirtualFile().getPath()) && (!instance.getLeftCompare().belongProject.getBasePath().equals(project.getBasePath()))) {
+            if (items != null && items.length > 0) {
+                if ((!instance.getLeftCompare().belongProject.getBasePath().equals(currentProject.getBasePath())) && !leftFile.getPath().equals(items[0].getVirtualFile().getPath())) {
                     //maybe it's another project file, so we do it!
                     System.out.println("maybe it's another project file, so we do it!");
                     presentation.setEnabledAndVisible(true);
-                    mAutoCompareFile = new CompareObject(items[0].getVirtualFile(),project);
+                    mAutoCompareFile = new CompareObject(items[0].getVirtualFile(), currentProject);
                 } else {
                     //alreay the same file, we don't enable it
-                    System.out.println("alreay the same file, we don't enable it");
+                    System.out.println("alreay the same file or in the same project, we don't enable it");
                     presentation.setEnabledAndVisible(false);
                 }
-            }else {
+            } else {
                 presentation.setEnabledAndVisible(false);
             }
 
