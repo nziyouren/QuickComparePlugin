@@ -34,6 +34,10 @@
 
 ## Change note
 
+### V0.5.4
+* Support internal diff view
+* Compatible with other jetbrains products
+
 ### V0.5.3
 * Fix issue: can't find autoenable.png. Thanks to Simone Z
 
