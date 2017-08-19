@@ -14,7 +14,7 @@ import java.io.IOException;
 public class InternalComparePolicy extends AbstractComparePolicy {
     @Override
     public void compare(CompareObject leftCompare, CompareObject rightCompare) {
-
+        super.compare(leftCompare, rightCompare);
         System.out.println("homepath:" + PathManager.getHomePath());
 
         Process p = null;

@@ -14,6 +14,7 @@ public class BeyondComparePolicy extends AbstractComparePolicy {
 
     @Override
     public void compare(CompareObject leftCompare, CompareObject rightCompare) {
+        super.compare(leftCompare, rightCompare);
         Process p = null;
         try {
             System.out.println("before compare...");

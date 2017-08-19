@@ -36,4 +36,12 @@ public class CompareObject{
             return false;
         }
     }
+
+    @Override
+    public String toString() {
+        return "CompareObject{" +
+                "compareFile=" + compareFile.getPath() +
+                ", belongProject=" + belongProject.getBasePath() +
+                '}';
+    }
 }
