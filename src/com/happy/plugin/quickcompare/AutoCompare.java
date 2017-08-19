@@ -121,12 +121,11 @@ public class AutoCompare extends AnAction {
             if (items != null && items.length > 0) {
                 if ((!instance.getLeftCompare().belongProject.getBasePath().equals(currentProject.getBasePath())) && !leftFile.getPath().equals(items[0].getVirtualFile().getPath())) {
                     //maybe it's another project file, so we do it!
-                    System.out.println("maybe it's another project file, so we do it!");
                     presentation.setEnabledAndVisible(true);
                     mAutoCompareFile = new CompareObject(items[0].getVirtualFile(), currentProject);
                 } else {
                     //alreay the same file, we don't enable it
-                    System.out.println("alreay the same file or in the same project, we don't enable it");
+                    System.out.println("alreay the same file or in the same project, we don't show auto compare menu");
                     presentation.setEnabledAndVisible(false);
                 }
             } else {

@@ -78,22 +78,33 @@ public class CompareTo extends AnAction {
 
         if (state == CompareManager.SelectState.INITIALIZE){
 
-            System.out.println("Compare to setVisible false: "+state.name());
             Presentation presentation = e.getPresentation();
             presentation.setEnabledAndVisible(false);
 
 
         }else if (state == CompareManager.SelectState.WAITFORCOMPARE){
 
-            System.out.println("Compare to setVisible true: "+state.name());
-
-            Presentation presentation = e.getPresentation();
-            presentation.setEnabledAndVisible(true);
-
             VirtualFile leftFile = instance.getLeftCompare().compareFile;
-            String compareTo = leftFile.getName();
+            VirtualFile currentFile = e.getData(PlatformDataKeys.VIRTUAL_FILE);
 
-            presentation.setText("Compare to \""+compareTo+"\"");
+            if (currentFile.getPath().equals(leftFile.getPath())){
+
+                System.out.println("the same file, don't show compare to menu");
+                Presentation presentation = e.getPresentation();
+                presentation.setEnabledAndVisible(false);
+
+            }else {
+
+                Presentation presentation = e.getPresentation();
+                presentation.setEnabledAndVisible(true);
+                presentation.setText("Compare to \""+leftFile.getName()+"\"");
+
+            }
+
+
+
+
+
 
         }
 
