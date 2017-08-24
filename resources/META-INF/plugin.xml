@@ -5,11 +5,12 @@
   <vendor email="nziyouren@gmail.com" url="https://github.com/nziyouren/QuickComparePlugin">Happy software</vendor>
 
   <description><![CDATA[
-      Quick compare tool.<br>
+      Quick compare tool. Compatible with all Jetbrains familiar IDEs. Compare files and folders with external/internal compare tools acrossing different projects like BeyondCompare's way: Select any left file and compare to it<br>
     ]]></description>
 
   <change-notes><![CDATA[
       v0.5.4 Support internal diff view. Now compatible other jetbrains products<br>
+      <b>when upgrade from old version, please reset compare tool path.</b><br>
       v0.5.3 Fix issue: can't find autoenable.png. Thanks to Simone Z<br>
       v0.5.2 Fix NPE exception on AndroidStudio 2.3<br>
       V0.5 Add auto compare function. When select left file to compare, then jump to another project. If the same file existed in another project, the autocompare menu will appear automatically.<br>
