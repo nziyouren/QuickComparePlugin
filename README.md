@@ -30,17 +30,17 @@ It's a Jetbrains product plugin, compatible with all familiar IDEs, such as Andr
 1. After install complete. Go to File->Settings->Other Settings->QuickCompare
     
 2. Select external compare tool executable path. Click apply. Note: On mac os, you must Install Command Line Tools first. [http://www.scootersoftware.com/support.php?zz=kb_vcs_osx](http://www.scootersoftware.com/support.php?zz=kb_vcs_osx)    
-<img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot1.jpg" alt="Drawing" width="450px" />
+<p align="center"><img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot1.jpg" alt="Drawing" width="450px" /></p>
 
 3. Open a file. Right click pop up editor menu. Select menu item "Select Left for Compare"
-    <img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot2.jpg" alt="Drawing" width="450px" />
+<p align="center"><img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot2.jpg" alt="Drawing" width="450px" /></p>
 
 4. Open another file. Right click pop up editor menu. Select menu item "Compare to"
-<img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot3.jpg" alt="Drawing" width="450px" />
+<p align="center"><img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot3.jpg" alt="Drawing" width="450px" /></p>
 
 ## Video
 
-<img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/tutorial.gif" alt="Drawing" width="750px" height="410px" />
+<img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/tutorial.gif" alt="Drawing" width="900px" height="625px" />
 
 ## Change note
 
