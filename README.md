@@ -27,19 +27,20 @@ It's a Jetbrains product plugin, compatible with all familiar IDEs, such as Andr
 
 ## How to use?
 
-* After install complete. Go to File->Settings->Other Settings->QuickCompare
+1. After install complete. Go to File->Settings->Other Settings->QuickCompare
     
-* Select external compare tool executable path. Click apply. Note: On mac os, you must Install Command Line Tools first. [http://www.scootersoftware.com/support.php?zz=kb_vcs_osx](http://www.scootersoftware.com/support.php?zz=kb_vcs_osx)
-    
+2. Select external compare tool executable path. Click apply. Note: On mac os, you must Install Command Line Tools first. [http://www.scootersoftware.com/support.php?zz=kb_vcs_osx](http://www.scootersoftware.com/support.php?zz=kb_vcs_osx)    
 <img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot1.jpg" alt="Drawing" width="450px" />
 
-* Open a file. Right click pop up editor menu. Select menu item "Select Left for Compare"
-    
-<img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot2.jpg" alt="Drawing" width="450px" />
+3. Open a file. Right click pop up editor menu. Select menu item "Select Left for Compare"
+    <img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot2.jpg" alt="Drawing" width="450px" />
 
-* Open another file. Right click pop up editor menu. Select menu item "Compare to"
-
+4. Open another file. Right click pop up editor menu. Select menu item "Compare to"
 <img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/screenshot3.jpg" alt="Drawing" width="450px" />
+
+## Video
+
+<img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/tutorial.gif" alt="Drawing" width="1398px" height="976px" />
 
 ## Change note
 
