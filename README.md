@@ -1,20 +1,29 @@
 # QuickComparePlugin
 
-### Android studio plugin. Quick compare using external compare tools acrossing different projects
+## What's QuickComparePlugin？
+It's a Jetbrains product plugin, compatible with all familiar IDEs, such as Android studio, Pycharm, PHPStorm. You can quick compare files and folders with external/internal compare tools **acrossing different projects like BeyondCompare's way**: Select any left file and compare to it. 
 
 ## Why I develop this plugin?
 * Please refer my blog:[http://www.jianshu.com/p/2d7433bf54e9](http://www.jianshu.com/p/2d7433bf54e9)
 
 
 ## Feature
-* With auto compare, you don't need to find the same name file in another project. The plugin find it automatically, then enable it. All you need to do is right click.
-* Quick compare acrossing different projects with external compare tool.
-* Support Windows and Mac OS
+* Auto compare: You don't need to find and navigate to the same name file in another project manually. The plugin will find it, all you need to do is right click and select "Auto Compare" menu.
+* Quick compare: Quick compare like BeyondCompare's way. User don't need to click "compare with" menu and then show a dialog to choose another file.
+
+## Supported platform OS
+* Windows
+* Mac
+* Linux
+
+## Supported Compare tool
+* BeyondCompare
+* Jetbrains internal diff
+* Continue to add more later
 
 ## Install 
 
 * Install from Android studio plugin repository, search "quickcompare"
-* Checkout source code and build QuickCompare.jar
 
 ## How to use?
 
@@ -36,7 +45,7 @@
 
 ### V0.5.4
 * Support internal diff view
-* Compatible with other jetbrains products
+* Compatible with other jetbrains familiar IDEs
 
 ### V0.5.3
 * Fix issue: can't find autoenable.png. Thanks to Simone Z
