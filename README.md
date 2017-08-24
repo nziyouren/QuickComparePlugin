@@ -66,7 +66,7 @@ It's a Jetbrains product plugin, compatible with all familiar IDEs, such as Andr
 ### V0.1 
 * Implement baisc function. Currently only supported windows.
     
-## Why I develop this plugin?
+## Story behind this plugin?
 * Please refer my blog:[http://www.jianshu.com/p/2d7433bf54e9](http://www.jianshu.com/p/2d7433bf54e9)
 
 # Contact
