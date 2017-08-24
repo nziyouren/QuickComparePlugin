@@ -3,10 +3,6 @@
 ## What's QuickComparePlugin？
 It's a Jetbrains product plugin, compatible with all familiar IDEs, such as Android studio, Pycharm, PHPStorm. You can quick compare files and folders with external/internal compare tools **acrossing different projects like BeyondCompare's way**: Select any left file and compare to it. 
 
-## Why I develop this plugin?
-* Please refer my blog:[http://www.jianshu.com/p/2d7433bf54e9](http://www.jianshu.com/p/2d7433bf54e9)
-
-
 ## Feature
 * Auto compare: You don't need to find and navigate to the same name file in another project manually. The plugin will find it, all you need to do is right click and select "Auto Compare" menu.
 * Quick compare: Quick compare like BeyondCompare's way. User don't need to click "compare with" menu and then show a dialog to choose another file.
@@ -70,6 +66,8 @@ It's a Jetbrains product plugin, compatible with all familiar IDEs, such as Andr
 ### V0.1 
 * Implement baisc function. Currently only supported windows.
     
+## Why I develop this plugin?
+* Please refer my blog:[http://www.jianshu.com/p/2d7433bf54e9](http://www.jianshu.com/p/2d7433bf54e9)
 
 # Contact
 You can reach me by email nziyouren@gmail.com
