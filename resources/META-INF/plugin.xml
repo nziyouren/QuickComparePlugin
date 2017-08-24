@@ -1,5 +1,5 @@
 <idea-plugin version="2">
-  <id>com.happy.plugin.quickcompare</id>
+  <id>com.your.company.unique.plugin.id</id>
   <name>QuickCompare</name>
   <version>0.5.4</version>
   <vendor email="nziyouren@gmail.com" url="https://github.com/nziyouren/QuickComparePlugin">Happy software</vendor>
