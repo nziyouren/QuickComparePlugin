@@ -19,7 +19,7 @@ It's a Jetbrains product plugin, compatible with all familiar IDEs, such as Andr
 ## Supported Compare tool
 * BeyondCompare
 * Jetbrains internal diff
-* Continue to add more later
+* Continue to add more later...
 
 ## Install 
 
@@ -40,7 +40,7 @@ It's a Jetbrains product plugin, compatible with all familiar IDEs, such as Andr
 
 ## Video
 
-<img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/tutorial.gif" alt="Drawing" width="1398px" height="976px" />
+<img src="https://github.com/nziyouren/QuickComparePlugin/blob/master/screenshots/windows/tutorial.gif" alt="Drawing" width="750px" height="410px" />
 
 ## Change note
 
